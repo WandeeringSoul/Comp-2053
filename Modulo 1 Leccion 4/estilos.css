@@ -1,0 +1,40 @@
+p {
+    font-size: 16px;
+    color: #333333;
+}
+
+
+.michael {
+    color: #e63946;
+    font-weight: bold;
+}
+
+
+.joey {
+    color: #457b9d;
+    font-weight: bold;
+}
+
+
+.john {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+
+.dave {
+    color: #f4a261;
+    font-weight: bold;
+}
+
+
+.ian {
+    color: #6a4c93;
+    font-weight: bold;
+}
+
+
+#titulo-principal {
+    color: #333333;
+    text-align: center;
+}

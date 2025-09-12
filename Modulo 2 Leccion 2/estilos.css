@@ -20,13 +20,12 @@ body {
     min-width: 200px;
 }
 
-
 @media (max-width: 768px) {
     .column {
         flex: 1 1 45%;
     }
 
-    abab ll l .column:nth-child(3) {
+    .column:nth-child(3) {
         flex: 1 1 100%;
     }
 }

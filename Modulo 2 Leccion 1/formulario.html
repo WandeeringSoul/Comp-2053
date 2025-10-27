@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Suscripción</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        header {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+            color: #333;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 300px;
+        }
+
+        #form-cont {
+            grid-area: form;
+            background-color: whitesmoke;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4e54c8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #080e80;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            background-color: #4e54c8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .boton-volver:hover {
+            background-color: #080e80;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenidos a Esperanza Verde</h1>
+        <p>
+            Un proyecto comunitario dedicado a la protección del medio ambiente y a la promoción de un estilo de vida
+            sostenible.<br>
+            Juntos podemos sembrar un futuro mejor.
+        </p>
+    </header>
+
+    <section>
+        <h2>Formulario de Suscripción</h2>
+        <div id="form-cont">
+            <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellidos" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <a href="index.html" class="boton-volver">Volver a la página principal</a>
+</body>
+
+</html>

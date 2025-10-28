@@ -1,0 +1,341 @@
+/* ==== ESTRUCTURA GENERAL ==== */
+
+/* Grid principal para el cuerpo */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "acerca-de"
+        "como-ayudar"
+        "testimonios"
+        "galeria"
+        "suscripcion"
+        "footer";
+    grid-template-columns: 1fr;
+}
+
+/* Estilos generales */
+header, section, footer {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ==== HEADER ==== */
+header {
+    background-color: #4e54c8;
+    color: #333;
+    grid-area: header;
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* ==== ACERCA DE ==== */
+#acerca-de {
+    grid-area: acerca-de;
+    background-color: #ffffff;
+    color: #333;
+}
+
+#acerca-de h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+#acerca-de h2::after {
+    content: "";
+    width: 300px;
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#acerca-de p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ==== CÓMO AYUDAR ==== */
+#como-ayudar {
+    grid-area: como-ayudar;
+    background-color: #f0f4ff;
+}
+
+#como-ayudar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+#como-ayudar h2::after {
+    content: "";
+    width: 300px;
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#como-ayudar p,
+#como-ayudar li {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+#como-ayudar ol {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+#como-ayudar li {
+    margin: 10px 0;
+}
+
+/* ==== TESTIMONIOS ==== */
+#testimonios {
+    grid-area: testimonios;
+}
+
+#testimonios .contenedor-testimonios {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#testimonios article {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 25px;
+    flex: 1;
+    text-align: center;
+}
+
+/* ==== GALERÍA ==== */
+#galeria {
+    grid-area: galeria;
+}
+
+#galeria .contenedor-imagenes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#galeria img {
+    width: 25%;
+    border-radius: 25px;
+}
+
+/* ==== SUSCRIPCIÓN ==== */
+#suscripcion {
+    grid-area: suscripcion;
+}
+
+#suscripcion form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#suscripcion input,
+#suscripcion button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.suscribirse {
+    display: inline-block;
+    background-color: #4e54c8;
+    color: white;
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 400;
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#suscripcion button {
+    background: #4e54c8;
+    color: #333;
+    cursor: pointer;
+}
+
+.boton-formulario {
+    display: none;
+    background: #ff6347;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    grid-area: footer;
+    background-color: #4e54c8;
+    color: #333;
+    font-size: 1rem;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* ==== FLEX GENERAL ==== */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==== FORMULARIO.HTML ==== */
+body.formulario header {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+body.formulario header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body.formulario header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+body.formulario form {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 300px;
+}
+
+body.formulario input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+body.formulario button {
+    padding: 10px;
+    background-color: #4e54c8;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+body.formulario button:hover {
+    background-color: #080e80;
+}
+
+/* Botón volver */
+.boton-volver {
+    display: inline-block;
+    background-color: #4e54c8;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.boton-volver:hover {
+    background-color: #080e80;
+}
+
+/* ==== RESPONSIVIDAD ==== */
+@media (max-width: 768px) {
+    /* Header: reducir tamaño del título en mobile */
+    header h1,
+    body.formulario header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Testimonios y galería: poner en columna */
+    #testimonios .contenedor-testimonios,
+    #galeria .contenedor-imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustar imágenes de galería */
+    #galeria img {
+        width: 80%;
+    }
+
+    /* Suscripción: mostrar botón de ir al formulario */
+    #suscripcion .boton-formulario {
+        display: inline-block;
+    }
+}
+
+/* ==== DESKTOP ==== */
+@media (min-width: 1025px) {
+    /* Header: tamaño grande */
+    header h1,
+    body.formulario header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Testimonios y galería: fila */
+    #testimonios .contenedor-testimonios,
+    #galeria .contenedor-imagenes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Ajuste de imágenes */
+    #galeria img {
+        width: 30%;
+    }
+
+    /* Suscripción: ocultar botón extra (ya se ve el formulario) */
+    #suscripcion .boton-formulario {
+        display: none;
+    }
+}
